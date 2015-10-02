@@ -614,30 +614,8 @@ Use of these build scripts requires Apache Ant to be installed.  See
 		<jar destfile="${maven}/${artifact}-${version}-sources.jar" 
 				basedir="${build}" />
 		
-		<antcall target="build-javadoc" />
-		<jar destfile="${maven}/${artifact}-${version}-javadoc.jar"
-				basedir="${javadoc}" />
-		
-		<exec executable="gpg" failonerror="true">
-			<arg value="-ab" />
-			<arg value="${maven}/${artifact}-${version}.pom" />
-		</exec>
-		
-		<exec executable="gpg" failonerror="true">
-			<arg value="-ab" />
-			<arg value="${maven}/${artifact}-${version}.jar" />
-		</exec>
-		
-		<exec executable="gpg" failonerror="true">
-			<arg value="-ab" />
-			<arg value="${maven}/${artifact}-${version}-sources.jar" />
-		</exec>
-			
-		<exec executable="gpg" failonerror="true">
-			<arg value="-ab" />
-			<arg value="${maven}/${artifact}-${version}-javadoc.jar" />
-		</exec>
-		
+
+
 		<jar destfile="${maven}/${artifact}-${version}-bundle.jar"
 				basedir="${maven}" />
 	</target>

@@ -6,3 +6,6 @@ pisa/
 test-results/
 *.exe
 *~
+maven/
+javadoc/
+.idea

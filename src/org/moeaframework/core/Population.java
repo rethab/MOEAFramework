@@ -17,6 +17,7 @@
  */
 package org.moeaframework.core;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -29,7 +30,7 @@ import java.util.NoSuchElementException;
 /**
  * A collection of solutions and common methods for manipulating the collection.
  */
-public class Population implements Iterable<Solution> {
+public class Population implements Iterable<Solution>, Serializable {
 
 	/**
 	 * The internal data storage for solutions.
